@@ -1,0 +1,28 @@
+[class*="btn"] {
+  font-weight: 500;
+  color: $primary-grey;
+  padding: 5px 15px;
+  border: 1px solid $primary-grey;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &[class*="--block"] {
+    display: block;
+    width: fit-content;
+  }
+  &[class*="--centered"] {
+    margin: auto;
+  }
+
+  &:hover {
+    color: $background-3;
+    border: 1px solid $border-1;
+    background-color: $white;
+  }
+
+  // &[class*="__primary"] {
+  //   &[class*="--small"] {
+
+  //   }
+  // }
+}
