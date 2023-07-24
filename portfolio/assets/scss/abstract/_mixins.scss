@@ -1,0 +1,90 @@
+// FONT FACE
+@mixin fontface($font-family, $url, $fw) {
+  font-display: swap;
+  font-family: $font-family;
+  src: $url;
+  font-weight: $fw;
+}
+
+// BREAKPOINTS
+@mixin desktop($breakpoint) {
+  @if $breakpoint == extra_big_desktop {
+    @media only screen and (max-width: 1680px) {
+      @content;
+    } //1680
+  }
+  @if $breakpoint == big_desktop {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    } //1440
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 1366px) {
+      @content;
+    } //1366
+  }
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    } //1200
+  }
+  @if $breakpoint == tab_land {
+    @media only screen and (max-width: 991px) {
+      @content;
+    } //991
+  }
+  @if $breakpoint == tab_port {
+    @media only screen and (max-width: 767px) {
+      @content;
+    } //767
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 576px) {
+      @content;
+    } //576
+  }
+  @if $breakpoint == small_phone {
+    @media only screen and (max-width: 440px) {
+      @content;
+    } //576
+  }
+}
+
+// GRID
+@mixin flex($number) {
+  -ms-flex: 0 0 $number;
+  flex: 0 0 $number;
+  max-width: $number;
+}
+
+// ABSOLUTE ELEMENT
+@mixin absolute($top, $right, $bottom, $left, $width, $height, $pseudo: false) {
+  @if $pseudo {
+    content: "";
+  }
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+// IMAGE
+@mixin img($width, $max-width, $height) {
+  width: $width;
+  max-width: $max-width;
+  height: $height;
+  object-fit: cover;
+  object-position: center;
+}
+
+// TEXT
+@mixin webkit($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

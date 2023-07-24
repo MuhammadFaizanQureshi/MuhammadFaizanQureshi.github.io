@@ -1,0 +1,228 @@
+#home {
+  .hero {
+    background-image: url(./img/hero-section.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+
+    &__content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $white;
+      max-width: 767px;
+
+      h1 {
+        font-size: 94px;
+        margin-bottom: 22px;
+      }
+    }
+  }
+  .about {
+    padding: 85px 0px;
+    background: linear-gradient(45deg, $gradient-1 0%, $gradient-2 100%);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      @include absolute(-86px, -95px, unset, unset, 350px, 335px, true);
+      background-image: url(./img/circle-overlay.png);
+    }
+  }
+  .services {
+    background-image: url(./img/services-img.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 90px 0px;
+
+    .service-main {
+      margin-top: 70px;
+    }
+  }
+  .technology {
+    background: linear-gradient(0deg, $gradient-2 0%, $gradient-1 100%);
+    padding: 38px 0px 80px;
+
+    .technology-main {
+      margin-top: 53px;
+
+      .col-lg-6 {
+        &:first-child {
+          border-right-color: 1px solid $border-4;
+        }
+      }
+      h3 {
+        font-size: 24px;
+      }
+      .stack {
+        max-width: 200px;
+        margin: 70px auto 0px;
+
+        &__single {
+          width: 50%;
+          height: 100px;
+          margin-bottom: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+
+          &:hover .tag {
+            transform: translate(0px) !important;
+            opacity: 1 !important;
+          }
+
+          .tag {
+            background: $background-1;
+            border: 1px solid $border-1;
+            font-size: 12px;
+            font-weight: 300;
+            padding: 2px 10px;
+            @include absolute(false, false, 0px, 57px, false, false);
+            transform: translate(-10px, -10px);
+            opacity: 0;
+            transition: all 0.5s;
+            min-width: 121px;
+            z-index: 1;
+
+            &::after {
+              @include absolute(-10px, false, false, 0px, 10px, 10px, true);
+              background-image: url(./svg/tag-arrow.svg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .portfolio {
+    background: linear-gradient(
+      117deg,
+      $gradient-2 0%,
+      $gradient-2 15%,
+      $gradient-1 15%,
+      $gradient-1 85%,
+      $gradient-2 85%,
+      $gradient-2 100%
+    );
+    padding: 120px 0px 50px;
+
+    .portfolio-main {
+      max-width: 1492px;
+      margin: 70px auto 0px;
+      padding: 0px 15px;
+      position: relative;
+
+      .swiper-container {
+        padding-bottom: 70px;
+
+        .swiper-pagination {
+          width: 100%;
+          bottom: 0px;
+
+          &-bullet {
+            border: 1px solid $primary-grey;
+            margin: 0px 3px;
+
+            &-active {
+              background-color: $background-1;
+            }
+          }
+        }
+      }
+      .mockup {
+        width: fit-content;
+        margin: auto;
+        position: relative;
+
+        img {
+          max-width: 100%;
+        }
+        &__inner {
+          @include absolute(5.8%, false, false, 12.7%, 75.5%, 82.6%);
+          overflow: hidden;
+          z-index: 9;
+        }
+        &__text,
+        &__website {
+          @include absolute(0px, false, false, 0px, 100%, 100%);
+        }
+        &__text {
+          background-color: $background-5;
+          padding: 20px 15px 15px;
+          transition: all 0.6s;
+          top: -100%;
+
+          p {
+            text-align: center;
+            font-size: 14px;
+            max-width: 472px;
+            margin: 0px auto 25px;
+          }
+          .d-flex {
+            margin: 50px auto 0px;
+            max-width: 384px;
+
+            h6 {
+              font-size: 16px;
+              margin-bottom: 12px;
+            }
+            span {
+              display: block;
+              font-size: 12px;
+
+              &:not(:last-child) {
+                margin-bottom: 3px;
+              }
+            }
+          }
+        }
+        &__website {
+          overflow: hidden;
+        }
+        &:hover .mockup__text {
+          top: 0% !important;
+        }
+      }
+      .swiper-nav {
+        @include absolute(55%, false, false, -5%, 110%, 33px);
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+
+        div {
+          position: static;
+          margin: unset;
+          height: unset;
+          border: 1px solid $border-1;
+          border-radius: 50%;
+          width: 33px;
+          z-index: 1;
+
+          &::after {
+            font-size: 16px;
+            color: $border-1;
+          }
+        }
+      }
+    }
+  }
+  .testimonial {
+    padding: 70px 0px;
+    background-color: $background-6;
+    position: relative;
+
+    #particles-js {
+      @include absolute(0, 0, 0, 0, 100%, 100%);
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    .testimonial-main {
+      margin-top: 71px;
+    }
+  }
+}

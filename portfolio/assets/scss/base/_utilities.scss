@@ -1,0 +1,85 @@
+[class^="container"] {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0px auto;
+  padding: 0px 15px;
+
+  &[class*="--fluid"] {
+    max-width: 100%;
+  }
+}
+
+// DISPLAY
+.d {
+  &-flex {
+    display: flex;
+  }
+  &-block {
+    display: block;
+  }
+  &-inline-block {
+    display: inline-block;
+  }
+}
+
+// FLEX
+.justify-content {
+  &-center {
+    justify-content: center;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+}
+.align-items {
+  &-center {
+    align-items: center;
+  }
+  &-end {
+    align-items: flex-end;
+  }
+}
+.flex {
+  &-1 {
+    flex: 1;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+// WIDTH
+@mixin width($width, $value) {
+  #{$width}: $value;
+}
+@for $i from 1 through 4 {
+  @each $width in width {
+    .#{$width}-#{($i * 25)} {
+      @include width($width, 1% * $i * 25);
+    }
+  }
+}
+
+// MARGIN
+@mixin offset-margin($margin, $value) {
+  margin-#{$margin}: $value;
+}
+@for $i from 1 through 20 {
+  @each $margin in top, bottom, left, right {
+    .margin-#{$margin}-#{($i * 5)} {
+      @include offset-margin($margin, 1px * $i * 5);
+    }
+  }
+}
+
+// PADDING
+@mixin offset-padding($padding, $value) {
+  padding-#{$padding}: $value;
+}
+@for $i from 1 through 20 {
+  @each $padding in top, bottom, left, right {
+    .padding-#{$padding}-#{($i * 5)} {
+      @include offset-padding($padding, 1px * $i * 5);
+    }
+  }
+}

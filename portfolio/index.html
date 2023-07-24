@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINK -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/vendors/swiper.css">
+    <link rel="stylesheet" href="/assets/style.css"> <!-- css -->
+
+    <!-- TITLE -->
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="scrollbar">
+      <div class="scroller">
+
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="logo"><img src="./assets/img/logo.png" alt="Logo"></div>
+
+          <div class="toggler" id="toggler" onclick="openMenu()">
+            <button>
+              <span>
+              </span>
+            </button>
+          </div>
+
+          <div class="navbar" id="navbar">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Portfolios</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="navigation-tab">
+      <a href="#hero" class="tab">
+        <span>Hero</span>
+      </a>
+      <a href="#about" class="tab">
+        <span>About</span>
+      </a>
+      <a href="#services" class="tab">
+        <span>Services</span>
+      </a>
+      <a href="#technology" class="tab">
+        <span>Technology</span>
+      </a>
+      <a href="#portfolio" class="tab">
+        <span>Portfolio</span>
+      </a>
+      <a href="#testimonials" class="tab">
+        <span>Testimonials</span>
+      </a>
+      <a href="#contact" class="tab">
+        <span>Contact</span>
+      </a>
+    </div>
+
+    <div class="social-icon">
+      <h6>Social</h6>
+      <a class="icon linkedin" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18.348" height="18.348" viewBox="0 0 18.348 18.348">
+          <path id="linkedin"
+            d="M4.107,18.349H.3V6.1h3.8ZM2.2,4.428A2.213,2.213,0,1,1,4.406,2.2,2.222,2.222,0,0,1,2.2,4.428ZM18.344,18.349h-3.8V12.385c0-1.421-.029-3.244-1.978-3.244-1.978,0-2.281,1.544-2.281,3.141v6.066H6.49V6.1h3.648V7.77h.053a4,4,0,0,1,3.6-1.978c3.85,0,4.558,2.535,4.558,5.828v6.729Z"
+            transform="translate(0 -0.001)" fill="#fff" />
+        </svg>
+      </a>
+      <a class="icon instagram" href="#" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="19.663" height="19.659" viewBox="0 0 19.663 19.659">
+          <path id="instagram"
+            d="M9.829,7.027a5.04,5.04,0,1,0,5.04,5.04A5.032,5.032,0,0,0,9.829,7.027Zm0,8.317a3.277,3.277,0,1,1,3.277-3.277A3.283,3.283,0,0,1,9.829,15.344Zm6.422-8.523a1.176,1.176,0,1,1-1.176-1.176A1.173,1.173,0,0,1,16.251,6.821Zm3.338,1.193A5.818,5.818,0,0,0,18,3.895a5.856,5.856,0,0,0-4.119-1.588c-1.623-.092-6.488-.092-8.111,0A5.848,5.848,0,0,0,1.652,3.89,5.837,5.837,0,0,0,.064,8.009c-.092,1.623-.092,6.488,0,8.111A5.818,5.818,0,0,0,1.652,20.24a5.864,5.864,0,0,0,4.119,1.588c1.623.092,6.488.092,8.111,0A5.818,5.818,0,0,0,18,20.24a5.856,5.856,0,0,0,1.588-4.119c.092-1.623.092-6.484,0-8.107Zm-2.1,9.848a3.318,3.318,0,0,1-1.869,1.869c-1.294.513-4.365.395-5.795.395s-4.505.114-5.795-.395a3.318,3.318,0,0,1-1.869-1.869c-.513-1.294-.395-4.365-.395-5.795s-.114-4.505.395-5.795A3.318,3.318,0,0,1,4.034,4.4C5.328,3.89,8.4,4.009,9.829,4.009s4.505-.114,5.795.395a3.318,3.318,0,0,1,1.869,1.869c.513,1.294.395,4.365.395,5.795S18.005,16.572,17.492,17.862Z"
+            transform="translate(0.005 -2.238)" fill="#fff" />
+        </svg>
+      </a>
+      <a class="icon twitter" href="#" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20.969" height="17.031" viewBox="0 0 20.969 17.031">
+          <path id="twitter"
+            d="M18.814,7.625c.013.186.013.373.013.559A12.144,12.144,0,0,1,6.6,20.412,12.145,12.145,0,0,1,0,18.483a8.891,8.891,0,0,0,1.038.053A8.607,8.607,0,0,0,6.373,16.7a4.305,4.305,0,0,1-4.018-2.98,5.42,5.42,0,0,0,.812.067A4.545,4.545,0,0,0,4.3,13.639,4.3,4.3,0,0,1,.852,9.421V9.368a4.328,4.328,0,0,0,1.943.545A4.3,4.3,0,0,1,1.464,4.166a12.216,12.216,0,0,0,8.861,4.5,4.852,4.852,0,0,1-.106-.985,4.3,4.3,0,0,1,7.438-2.941A8.461,8.461,0,0,0,20.384,3.7a4.286,4.286,0,0,1-1.889,2.368A8.616,8.616,0,0,0,20.969,5.4a9.238,9.238,0,0,1-2.155,2.222Z"
+            transform="translate(0 -3.381)" fill="#fff" />
+        </svg>
+      </a>
+      <a class="icon facebook" href="#" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11.231" height="20.969" viewBox="0 0 11.231 20.969">
+          <path id="facebook"
+            d="M12.1,11.8,12.687,8H9.045V5.538a1.9,1.9,0,0,1,2.14-2.05H12.84V.256A20.188,20.188,0,0,0,9.9,0c-3,0-4.959,1.818-4.959,5.108V8H1.609V11.8H4.943v9.174h4.1V11.8Z"
+            transform="translate(-1.609)" fill="#fff" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="pageWrapper" id="home">
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero__content">
+            <h6 class="subheading--border fs-16 fw-400 text-uppercase">Web Developer</h6>
+
+            <h1 class="hero__heading">Muhammad Faizan Qureshi</h1>
+
+            <p class="fs-20 fw-100 text-wrap">🚀 Passionate Software Engineer | ✨ Mastering WordPress | 🌐 Crafting
+              Seamless Web Experiences | 🛠️ Empowering Frontend Solutions | 🎯 Elevating Software Quality | 💼 Seeking
+              Opportunities </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about post" id="about">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="post__content">
+                <h2 class="mainheading--border-left">About Me</h2>
+
+                <div class="text-wrap">
+                  <p>"Highly motivated and recently graduated with a BS in Software Engineering, specializing in
+                    Frontend Web Development.
+                    Proficient in HTML5, CSS, JavaScript, React.js, and WordPress, with a focus on creating captivating
+                    and user-friendly
+                    interfaces."
+                    Passionate about staying at the forefront of emerging technologies and trends, constantly seeking
+                    opportunities to
+                    expand my skill set and embrace new challenges. With a keen interest in Software Quality Assurance
+                    and Software Project
+                    Management, I bring strong attention to detail and a commitment to delivering high-quality results.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="post__img">
+                <img src="./assets/img/about.png" alt="About Me">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="container">
+          <h2 class="mainheading--center--border-bottom">Services</h2>
+          <p class="main-text">
+            Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since.Lorem Ipsum is simply dummy text of the printingand
+            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+          </p>
+          <div class="service-main text-center">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card">
+                  <a href="#">
+                    <div class="card__header">
+                      <img src="./assets/img/psd to html.png" alt="">
+                    </div>
+                    <div class="card__body">
+                      <h3>PSD to HTML</h3>
+                      <p class="text-wrap">Lorem Ipsum is simply dummy text of the printingand typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since.
+
+                        Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since</p>
+                    </div>
+                    <div class="card__footer">
+                      <span>LEARN MORE</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="card">
+                  <a href="#">
+                    <div class="card__header">
+                      <img src="./assets/img/wordpress.png" alt="">
+                    </div>
+                    <div class="card__body">
+                      <h3>Wordpress</h3>
+                      <p class="text-wrap">Lorem Ipsum is simply dummy text of the printingand typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since.
+
+                        Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since</p>
+                    </div>
+                    <div class="card__footer">
+                      <span>LEARN MORE</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="card">
+                  <a href="#">
+                    <div class="card__header">
+                      <img src="./assets/img/woocommerce.png" alt="">
+                    </div>
+                    <div class="card__body">
+                      <h3>Woocommerce</h3>
+                      <p class="text-wrap">Lorem Ipsum is simply dummy text of the printingand typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since.
+
+                        Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since</p>
+                    </div>
+                    <div class="card__footer">
+                      <span>LEARN MORE</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="technology" id="technology">
+        <div class="container">
+          <h2 class="mainheading--center--border-bottom">My Technology Stack</h2>
+
+          <div class="technology-main text-center">
+            <div class="row">
+              <div class="col-md-6">
+                <h3>Languages</h3>
+                <div class="stack d-flex flex-wrap justify-content-between">
+                  <div class="stack__single">
+                    <img src="./assets/img/html.png" alt="">
+                    <div class="tag">HTML 5</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/css.png" alt="">
+                    <div class="tag">CSS 3</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/javascript.png" alt="">
+                    <div class="tag">Javascript</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/php.png" alt="">
+                    <div class="tag">PHP</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/jQuery.png" alt="">
+                    <div class="tag">jQuery</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/sass.png" alt="">
+                    <div class="tag">SASS</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h3>Technologies</h3>
+                <div class="stack d-flex flex-wrap justify-content-between">
+                  <div class="stack__single">
+                    <img src="./assets/img/vscode.png" alt="">
+                    <div class="tag">Visual Studio Code</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/wordpress.png" alt="">
+                    <div class="tag">Wordpress</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/bootstrap.png" alt="">
+                    <div class="tag">Bootstrap</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/swiper.png" alt="">
+                    <div class="tag">Swiper</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/xd.png" alt="">
+                    <div class="tag">Adobe XD</div>
+                  </div>
+                  <div class="stack__single">
+                    <img src="./assets/img/photoshop.png" alt="">
+                    <div class="tag">Adobe Photoshop</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <h2 class="mainheading--center--border-bottom">Portfolio</h2>
+          <p class="main-text">
+            Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since.Lorem Ipsum is simply dummy text of the printingand
+            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+          </p>
+        </div>
+
+        <div class="portfolio-main">
+          <div class="swiper-container portfolio-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="mockup">
+                  <img src="./assets/img/project.png" alt="">
+
+                  <div class="mockup__inner">
+                    <div class="mockup__website">
+                      <img src="./assets/img/apptly.png" alt="">
+                    </div>
+                    <div class="mockup__text">
+                      <p>Lorem Ipsum is simply dummy text of the printingand typesetting industry.Lorem Ipsum has been
+                        the industry's standard dummy text ever since.Lorem Ipsum is simply dummy text of the
+                        printingand </p>
+                      <a class="btn--block--centered" href="#">See More Details</a>
+                      <div class="d-flex justify-content-between">
+                        <div class="col">
+                          <h6>Languages</h6>
+                          <span>Html</span>
+                          <span>Css</span>
+                          <span>Javascript</span>
+                          <span>jQuery</span>
+                          <span>Php</span>
+                        </div>
+                        <div class="col">
+                          <h6>Technology</h6>
+                          <span>Visual Studio Code</span>
+                          <span>Wordpress</span>
+                          <span>Adobe XD</span>
+                          <span>Bootstrap</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mockup">
+                  <img src="./assets/img/project.png" alt="">
+
+                  <div class="mockup__inner">
+                    <div class="mockup__website">
+                      <img src="./assets/img/burfordCreative.png" alt="">
+                    </div>
+                    <div class="mockup__text">
+                      <p>Lorem Ipsum is simply dummy text of the printingand typesetting industry.Lorem Ipsum has been
+                        the industry's standard dummy text ever since.Lorem Ipsum is simply dummy text of the
+                        printingand </p>
+                      <a class="btn--block--centered" href="#">See More Details</a>
+                      <div class="d-flex justify-content-between">
+                        <div class="col">
+                          <h6>Languages</h6>
+                          <span>Html</span>
+                          <span>Css</span>
+                          <span>Javascript</span>
+                          <span>jQuery</span>
+                          <span>Php</span>
+                        </div>
+                        <div class="col">
+                          <h6>Technology</h6>
+                          <span>Visual Studio Code</span>
+                          <span>Wordpress</span>
+                          <span>Adobe XD</span>
+                          <span>Bootstrap</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mockup">
+                  <img src="./assets/img/project.png" alt="">
+
+                  <div class="mockup__inner">
+                    <div class="mockup__website">
+                      <img src="./assets/img/apptly.png" alt="">
+                    </div>
+                    <div class="mockup__text">
+                      <p>Lorem Ipsum is simply dummy text of the printingand typesetting industry.Lorem Ipsum has been
+                        the industry's standard dummy text ever since.Lorem Ipsum is simply dummy text of the
+                        printingand </p>
+                      <a class="btn--block--centered" href="#">See More Details</a>
+                      <div class="d-flex justify-content-between">
+                        <div class="col">
+                          <h6>Languages</h6>
+                          <span>Html</span>
+                          <span>Css</span>
+                          <span>Javascript</span>
+                          <span>jQuery</span>
+                          <span>Php</span>
+                        </div>
+                        <div class="col">
+                          <h6>Technology</h6>
+                          <span>Visual Studio Code</span>
+                          <span>Wordpress</span>
+                          <span>Adobe XD</span>
+                          <span>Bootstrap</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mockup">
+                  <img src="./assets/img/project.png" alt="">
+
+                  <div class="mockup__inner">
+                    <div class="mockup__website">
+                      <img src="./assets/img/burfordCreative.png" alt="">
+                    </div>
+                    <div class="mockup__text">
+                      <p>Lorem Ipsum is simply dummy text of the printingand typesetting industry.Lorem Ipsum has been
+                        the industry's standard dummy text ever since.Lorem Ipsum is simply dummy text of the
+                        printingand </p>
+                      <a class="btn--block--centered" href="#">See More Details</a>
+                      <div class="d-flex justify-content-between">
+                        <div class="col">
+                          <h6>Languages</h6>
+                          <span>Html</span>
+                          <span>Css</span>
+                          <span>Javascript</span>
+                          <span>jQuery</span>
+                          <span>Php</span>
+                        </div>
+                        <div class="col">
+                          <h6>Technology</h6>
+                          <span>Visual Studio Code</span>
+                          <span>Wordpress</span>
+                          <span>Adobe XD</span>
+                          <span>Bootstrap</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mockup">
+                  <img src="./assets/img/project.png" alt="">
+
+                  <div class="mockup__inner">
+                    <div class="mockup__website">
+                      <img src="./assets/img/apptly.png" alt="">
+                    </div>
+                    <div class="mockup__text">
+                      <p>Lorem Ipsum is simply dummy text of the printingand typesetting industry.Lorem Ipsum has been
+                        the industry's standard dummy text ever since.Lorem Ipsum is simply dummy text of the
+                        printingand </p>
+                      <a class="btn--block--centered" href="#">See More Details</a>
+                      <div class="d-flex justify-content-between">
+                        <div class="col">
+                          <h6>Languages</h6>
+                          <span>Html</span>
+                          <span>Css</span>
+                          <span>Javascript</span>
+                          <span>jQuery</span>
+                          <span>Php</span>
+                        </div>
+                        <div class="col">
+                          <h6>Technology</h6>
+                          <span>Visual Studio Code</span>
+                          <span>Wordpress</span>
+                          <span>Adobe XD</span>
+                          <span>Bootstrap</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper-nav">
+            <div class="swiper-button-prev swiper-btn"></div>
+            <div class="swiper-button-next swiper-btn"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonial" id="testimonials">
+        <div id="particles-js"></div>
+        <div class="container">
+          <h2 class="mainheading--center--border-bottom">Testimonial</h2>
+          <p class="main-text">
+            Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since.Lorem Ipsum is simply dummy text of the printingand
+            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+          </p>
+        </div>
+
+        <div class="testimonial-main">
+          <div class="swiper-container testimonial-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="./assets/vendors/swiper.js"></script> <!-- swiper -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- particle -->
+    <script src="./assets/script.js"></script> <!-- js -->
+  </body>
+
+</html>

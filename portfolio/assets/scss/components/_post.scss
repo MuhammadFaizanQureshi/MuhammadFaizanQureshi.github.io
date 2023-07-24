@@ -1,0 +1,36 @@
+.post {
+  &__img {
+    max-width: fit-content;
+    margin-left: auto;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      &::before {
+        transform: scale(1) !important;
+      }
+      img {
+        opacity: 1 !important;
+      }
+    }
+
+    img {
+      display: block;
+      box-shadow: 0px 0px 20px $box-shadow-1;
+      transition: all .8s;
+      opacity: .5;
+      max-width: 100%;
+    }
+
+    &::before {
+      @include absolute(15px,unset,unset,15px,calc(100% - 30px),calc(100% - 30px),true);
+      background-image: url(./svg/frame.svg);
+      background-position: center;
+      transform: scale(1.1);
+      transition: all .8s;
+    }
+  }
+  // &__content {
+
+  // }
+}
